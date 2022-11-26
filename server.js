@@ -17,7 +17,7 @@ app.get('/app/', function(req, res) {
 })
 
 app.get('/app/roll/', function(req, res) {
-	res.status(200).send(roll(6, 2, 1));
+	res.send(roll(6, 2, 1));
 })
 
 app.get('/app/roll', function(req, res) {
@@ -25,28 +25,28 @@ app.get('/app/roll', function(req, res) {
 	const dice = Number(req.body.dice);
 	const rolls = Number(req.body.rolls);
 	
-	res.status(200).send(roll(sides, dice. rolls));
+	res.send(roll(sides, dice. rolls));
 })
 
-app.get('/app/roll/:sides', function(req, res) {
+app.get('/app/roll/:sides/', function(req, res) {
 	const sides = Number(req.params.sides);
 	
-	res.status(200).send(roll(sides, 2, 1));
+	res.send(roll(sides, 2, 1));
 })
 
-app.get('/app/roll/:sides/:dice', function(req, res) {
+app.get('/app/roll/:sides/:dice/', function(req, res) {
 	const sides = Number(req.params.sides);
 	const dice = Number(req.params.dice);
 	
-	res.status(200).send(roll(sides, dice, 1));
+	res.send(roll(sides, dice, 1));
 })
 
-app.get('/app/roll/:sides/:dice/:rolls', function(req, res) {
+app.get('/app/roll/:sides/:dice/:rolls/', function(req, res) {
 	const sides = Number(req.params.sides);
         const dice = Number(req.params.dice);
 	const rolls = Number(req.params.rolls);
 
-        res.status(200).send(roll(sides, dice, rolls));
+        res.send(roll(sides, dice, rolls));
 })
 
 app.get('*', function(req, res) {
