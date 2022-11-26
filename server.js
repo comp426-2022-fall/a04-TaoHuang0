@@ -20,7 +20,7 @@ app.get('/app/roll/', function(req, res) {
 	res.status(200).send(roll(6, 2, 1));
 })
 
-app.post('/app/roll', function(req, res) {
+app.post('/app/roll/', function(req, res) {
     const sides = parseInt(req.body.sides);
     const dice = parseInt(req.body.dice);
     const rolls = parseInt(req.body.rolls);
