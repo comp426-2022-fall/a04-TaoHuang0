@@ -20,7 +20,7 @@ app.get('/app/roll/', function(req, res) {
 	res.status(200).send(roll(6, 2, 1));
 })
 
-app.get('/app/roll/', function(req, res) {
+app.get('/app/roll', function(req, res) {
 	const sides = Number(req.body.sides);
 	const dice = Number(req.body.dice);
 	const rolls = Number(req.body.rolls);
