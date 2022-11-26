@@ -4,9 +4,9 @@ import { roll } from "./lib/roll.js";
 import minimist from "minimist";
 import express from "express";
 
-var app = express();
+const app = express();
 
-var args = minimist(process.argv.slice(2));
+const args = minimist(process.argv.slice(2));
 
 var port = args.port || 5000;
 
@@ -31,7 +31,7 @@ app.get('/app/roll', function(req, res) {
 app.get('/app/roll/:sides', function(req, res) {
 	const sides = Number(req.params.sides);
 	
-	res.status(200).send(roll(sides, dice, rolls));
+	res.status(200).send(roll(sides, 2, 1));
 })
 
 app.get('/app/roll/:sides/:dice', function(req, res) {
