@@ -21,9 +21,9 @@ app.get('/app/roll/', function(req, res) {
 })
 
 app.post('/app/roll/', function(req, res) {
-    const sides = parseInt(req.body.sides);
-    const dice = parseInt(req.body.dice);
-    const rolls = parseInt(req.body.rolls);
+    const sides = Number(req.body.sides);
+    const dice = Number(req.body.dice);
+    const rolls = Number(req.body.rolls);
 
     res.send(roll(sides, dice, rolls));
 })
