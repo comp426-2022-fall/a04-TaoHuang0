@@ -11,7 +11,7 @@ var port = args.port || 5000
 app.use(express.urlencoded({extended: true}))
 
 app.get('/app/', function(req, res) {
-	res.status(200).send("200 OK");
+	res.status(200).send("200 OK")
 })
 
 app.get('/app/roll/', function(req, res) {
