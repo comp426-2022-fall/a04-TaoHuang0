@@ -29,7 +29,7 @@ app.post('/app/roll/', function(req, res) {
 app.get('/app/roll/:sides/', function(req, res) {
 	const sides = Number(req.params.sides)
 	
-	res.status(200).send(roll(sides, 2, 1));
+	res.status(200).send(roll(sides, 2, 1))
 })
 
 app.get('/app/roll/:sides/:dice/', function(req, res) {
