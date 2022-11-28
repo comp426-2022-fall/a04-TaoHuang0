@@ -23,7 +23,7 @@ app.post('/app/roll/', function(req, res) {
     const dice = Number(req.body.dice)
     const rolls = Number(req.body.rolls)
 
-    res.send(roll(sides, dice, rolls));
+    res.send(roll(sides, dice, rolls))
 })
 
 app.get('/app/roll/:sides/', function(req, res) {
