@@ -41,7 +41,7 @@ app.get('/app/roll/:sides/:dice/', function(req, res) {
 
 app.get('/app/roll/:sides/:dice/:rolls/', function(req, res) {
 	const sides = Number(req.params.sides)
-        const dice = Number(req.params.dice);
+        const dice = Number(req.params.dice)
 	const rolls = Number(req.params.rolls);
 
         res.status(200).send(roll(sides, dice, rolls));
