@@ -5,7 +5,6 @@ import minimist from "minimist";
 import express from "express";
 
 const app = express();
-
 const args = minimist(process.argv.slice(2));
 
 var port = args.port || 5000;
